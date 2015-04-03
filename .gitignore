@@ -1,0 +1,76 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+bin/
+build/
+develop-eggs/
+#dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+venv-*
+node_modules/
+bower_components/
+
+# Gulp compiled files
+staticfiles/js/application.min.js
+staticfiles/js/application.packages.min.js
+staticfiles/js/application.production.min.js
+staticfiles/css/application.min.css
+staticfiles/css/untouched
+assets/js/angular/tmp/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Rope
+.ropeproject
+
+# Django stuff:
+*.log
+*.pot
+*.sqlite3
+
+# Sphinx documentation
+docs/_build/
+
+# PyCharm
+
+.idea/
+
+.DS_Store
+assets/js/intranet/dist
+
+
+# Sass
+*.sass-cache

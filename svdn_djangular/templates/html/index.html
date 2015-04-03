@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html ng-app="appName">
+
+<head lang="en">
+    <base href="/">
+    <meta charset="UTF-8">
+    <title> SVDN Djangular - Start Template </title>
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <link href='{% static 'angular-material/angular-material.min.css' %}' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+    {% verbatim %}
+
+        <ng-include src="'start.html'" flex layout="column">
+
+        </ng-include>
+
+    {% endverbatim %}
+
+
+
+    <script src='{% static 'js/app.js' %}'></script>
+</body>
+</html>

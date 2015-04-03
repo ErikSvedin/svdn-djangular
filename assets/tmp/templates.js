@@ -1,0 +1,1 @@
+angular.module("appName").run(["$templateCache", function($templateCache) {$templateCache.put("start.html","<div ng-controller=\"AppCtrl as ctrl\" layout=\"column\" layout-align=\"center center\">\n\n    <h1>Your app is running!</h1>\n    {{ ctrl.values.first }} + {{ ctrl.values.second }} = {{ (ctrl.values.first+ctrl.values.second) }}\n\n</div>");}]);
