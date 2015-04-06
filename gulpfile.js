@@ -8,10 +8,14 @@ var gulp = require('gulp'),
     compass = require('gulp-compass'),
     ngAnnotate = require('gulp-ng-annotate'),
     minifyCSS = require('gulp-minify-css'),
+    browserSync = require('browser-sync'),
+    reload = browserSync.reload,
     templateCache   = require('gulp-angular-templatecache');
 
 
 var project = 'appName';
+var djangoPort = '8000';
+
 var paths = {
     templates:'./assets/templates/**/*.html',
     js:'./assets/app/**/*.js',
@@ -63,8 +67,34 @@ gulp.task('js', ['templates'], function () {
         .pipe(gulp.dest('./staticfiles/js'))
 });
 
+// Sass task
+gulp.task('styles', function () {
+    gulp.src(paths.scss).
+        pipe(compass({
+            config_file: 'config.rb',
+            sass: 'assets/styles'
+        })).
+        pipe(concat('style.css')).
+        pipe(rename({suffix: '.min'})).
+        pipe(minifyCSS({})).
+        pipe(gulp.dest('./staticfiles/css'));
+});
+
 // Watch file changes
 gulp.task('watch', ['templates', 'js'], function () {
     gulp.watch(paths.templates, ['js']);
     gulp.watch(paths.js, ['js']);
+});
+
+// Watch Files For Changes & Reload, the default task
+// be sure to proxy to correct port by setting djangoPort variable
+gulp.task('default', ['js', 'styles'], function () {
+  browserSync({
+    notify: false,
+    proxy: "127.0.0.1:"+djangoPort
+  });
+
+  gulp.watch([paths.scss], ['styles', reload]);
+  gulp.watch([paths.js], ['js', reload]);
+  gulp.watch([paths.templates], ['js', reload]);
 });
