@@ -5,7 +5,7 @@ Django 1.7 + angular w angular-material
 # Getting started
 
 ### Install bower/npm requirements:
-npm-install <br>
+npm install <br>
 bower install
 
 ### Run gulp watch task:
