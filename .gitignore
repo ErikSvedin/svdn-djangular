@@ -28,7 +28,7 @@ bower_components/
 # Gulp compiled files
 staticfiles/
 
-assets/js/angular/tmp/
+assets/tmp/
 
 # Installer logs
 pip-log.txt
