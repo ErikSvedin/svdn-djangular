@@ -1,3 +1,5 @@
+[![Build Status](https://scrutinizer-ci.com/g/ErikSvedin/svdn-djangular/badges/build.png?b=master)](https://scrutinizer-ci.com/g/ErikSvedin/svdn-djangular/build-status/master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/ErikSvedin/svdn-djangular/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/ErikSvedin/svdn-djangular/?branch=master)
+
 # svdn-djangular
 Django 1.7 + angular w angular-material
 
