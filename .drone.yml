@@ -1,7 +1,8 @@
-image: python
-script:
-  - python svdn_djangular/manage.py test
-notify:
-  email:
-    recipients:
-      - svedin.erik@gmail.com
+build:
+  image: python
+  script:
+    - python svdn_djangular/manage.py test
+  notify:
+    email:
+      recipients:
+        - svedin.erik@gmail.com
