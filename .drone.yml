@@ -1,5 +1,5 @@
 build:
-  image: python2.7
+  image: bradrydzewski/python:2.7
   script:
     - python svdn_djangular/manage.py test
   notify:
