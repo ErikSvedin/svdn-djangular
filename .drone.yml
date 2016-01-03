@@ -1,8 +1,8 @@
-#build:
-image: bradrydzewski/python:2.7
-script:
-  - python svdn_djangular/manage.py test
-notify:
-  email:
-    recipients:
-      - svedin.erik@gmail.com
+build:
+  image: bradrydzewski/python:2.7
+  script:
+    - python svdn_djangular/manage.py test
+  notify:
+    email:
+      recipients:
+        - svedin.erik@gmail.com
