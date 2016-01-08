@@ -1,7 +1,8 @@
-image: bradrydzewski/python:2.7
-script:
-  - pip install -r requirements.txt --use-mirrors
-  - python svdn_djangular/manage.py test
+build:
+  image: bradrydzewski/python:2.7
+  script:
+    - pip install -r requirements.txt --use-mirrors
+    - python svdn_djangular/manage.py test
 notify:
   # slack:
   #   webhook_url: 'https://hooks.slack.com/services/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'
