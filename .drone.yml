@@ -1,6 +1,6 @@
 build:
   image: bradrydzewski/python:2.7
-  script:
+  commands:
     - pip install -r requirements.txt --use-mirrors
     - python svdn_djangular/manage.py test
 notify:
