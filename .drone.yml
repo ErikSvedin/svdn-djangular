@@ -3,13 +3,13 @@ script:
   - pip install -r requirements.txt --use-mirrors
   - python svdn_djangular/manage.py test
 notify:
-  slack:
-    webhook_url: 'https://hooks.slack.com/services/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'
-    username: 'drone'
-    channel: '#drone-ci'
-    on_started: false
-    on_success: true
-    on_failure: true
+  # slack:
+  #   webhook_url: 'https://hooks.slack.com/services/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'
+  #   username: 'drone'
+  #   channel: '#drone-ci'
+  #   on_started: false
+  #   on_success: true
+  #   on_failure: true
   email:
     recipients:
       - svedin.erik@gmail.com
