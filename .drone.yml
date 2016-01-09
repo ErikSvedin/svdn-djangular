@@ -1,8 +1,17 @@
 build:
-  image: python2.7
-  script:
+  image: bradrydzewski/python:2.7
+  commands:
+    - sudo pip install -r requirements.txt
     - python svdn_djangular/manage.py test
-  notify:
-    email:
-      recipients:
-        - svedin.erik@gmail.com
+notify:
+  # slack:
+  #   webhook_url: 'https://hooks.slack.com/services/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'
+  #   username: 'drone'
+  #   channel: '#drone-ci'
+  #   on_started: false
+  #   on_success: true
+  #   on_failure: true
+  email:
+    recipients:
+      - svedin.erik@gmail.com
+      - erik.svedin@willandskill.se
